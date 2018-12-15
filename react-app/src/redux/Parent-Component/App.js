@@ -1,40 +1,27 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import { connect } from 'react-redux'
-import axios from 'axios'
-import * as actions from '../Actions/actions'
+import React, { Component } from "react";
+import logo from "./css-images/logo.svg";
+import "./css-images/App.css";
+import { connect } from "react-redux";
+import axios from "axios";
+import * as actions from "../Actions/actions";
+import { FullSite } from "../Child-Components/index";
 
 class App extends Component {
-  componentDidMount (props) {
-    this.props.dispatch(actions.SampleFunction('some-data'))
-  }
+  componentDidMount(props) {}
 
-  render () {
+  render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code> src / App.js </code> and save to reload.{' '}
-          </p>{' '}
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React{' '}
-          </a>{' '}
-        </header>{' '}
+      <div className="App">
+        <FullSite />
       </div>
-    ) // end Return
+    );
+    // end Return
   } // end Render
 } // end App
 
 const mapStateToProps = state => {
   return {
     me: state.appReducer.me
-  }
-}
-export default connect(mapStateToProps)(App)
+  };
+};
+export default connect(mapStateToProps)(App);
