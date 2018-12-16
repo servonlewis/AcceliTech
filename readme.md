@@ -1,1 +1,1 @@
-AcceliTech project from Servon and Marisa
+Template for business project
